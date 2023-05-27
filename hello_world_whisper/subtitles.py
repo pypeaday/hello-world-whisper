@@ -20,7 +20,7 @@ def check_for_adjacent_caption(input_file: str) -> bool:
     """Checks for an adjacent file that has a vtt extension. Indicates that captions do not need to be generated"""
     name = Path(input_file).stem
     caption_file = f"{name}.vtt"
-    return Path(caption_file).is_file()
+    return Path(Path(input_file).parent, caption_file).is_file()
 
 
 def check_for_embedded_caption(input_file: str) -> bool:
