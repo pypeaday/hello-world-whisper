@@ -72,7 +72,7 @@ def generate_captions(input_dir: str, dry_run: bool = False) -> None:
     """Generates captions for video files missing them"""
     video_list = get_list_of_videos(input_dir)
     # model = whisper.load_model("base")
-    model = whisper.load_model("small")
+    model = whisper.load_model("medium")
 
     for video in video_list:
         if not check_for_caption(video):
