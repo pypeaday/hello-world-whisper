@@ -52,9 +52,9 @@ def check_for_embedded_caption(input_file: str) -> bool:
 
 def check_for_caption(input_file: str) -> bool:
     """Check for any type of caption"""
-    return check_for_adjacent_caption(input_file) or check_for_embedded_caption(
+    return check_for_adjacent_caption(
         input_file
-    )
+    )  # or check_for_embedded_caption( input_file)
 
 
 def get_list_of_videos(input_dir: str) -> list[str]:
